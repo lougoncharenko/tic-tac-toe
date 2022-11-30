@@ -8,9 +8,21 @@ export const GameBoard = () => {
     const [mark, setMark] = useState<string>('')
     const playerOne = player('Player One', 'X');
     const playerTwo = player('Player Two', 'O');
-
+    let symbol = '';
     const placeMark = () => {
-
+        if (symbol === '') {
+            symbol = playerOne.symbol; 
+            setMark(symbol);
+            setMessage("Player Two's Turn");
+        } else if (symbol === playerOne.symbol) {
+            symbol = playerTwo.symbol;
+            setMark(symbol);
+            setMessage("Player One's Turn")
+        } else if (symbol === playerTwo.symbol) {
+            symbol = playerOne.symbol; 
+            setMark(symbol);
+            setMessage("Player Two's Turn");
+        }
     }
     return (
     <>
