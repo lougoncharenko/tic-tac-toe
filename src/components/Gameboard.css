@@ -20,3 +20,18 @@
 .cell:hover {
     background-color: antiquewhite;
 }
+
+.button {
+    background-color: rgb(179, 234, 49);
+    width: 150px;
+    align-self: center;
+    padding:8px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.shrink {
+    transform: scale(.1);
+    opacity: 0;
+}

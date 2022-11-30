@@ -14,15 +14,6 @@ flex-direction: column;
 justify-content: center;
 }
 
-.button {
-    background-color: rgb(179, 234, 49);
-    width: 150px;
-    align-self: center;
-    padding:8px;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 20px;
-}
 
 .winner {
     text-align: center;
