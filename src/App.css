@@ -1,4 +1,9 @@
 body {
+    background-image: url('https://i.etsystatic.com/5295659/r/il/2880b8/1895119556/il_1588xN.1895119556_kv3j.jpg');
     margin: 0;
     padding: 0;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
