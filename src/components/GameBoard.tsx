@@ -81,7 +81,7 @@ export const GameBoard = () => {
 
     const resetGame = () => {
         setData(['', '', '', '', '', '', '', '', '']);
-        const cells = document.querySelectorAll('cell')
+        const cells = document.querySelectorAll('div')
         cells.forEach((cell) => {
             cell.innerHTML = ''
         }) 
@@ -91,8 +91,9 @@ export const GameBoard = () => {
 
     return (
     <>
-    <Header  text ={message} />
-    <div className="content">
+    <Header />
+    <h2 className="winner">{winner}</h2>
+    <section className="content">
         <div className="cell" id="0" onClick={(e) => draw(e, 1)} >  </div>
         <div className="cell" id="1" onClick={(e) => draw(e, 2)} >  </div>
         <div className="cell" id="2" onClick={(e) => draw(e, 3)} >  </div>
@@ -104,15 +105,15 @@ export const GameBoard = () => {
         <div className="cell" id="6" onClick={(e) => draw(e, 7)} >  </div>
         <div className="cell" id="7" onClick={(e) => draw(e, 8)} >  </div>
         <div className="cell" id="8" onClick={(e) => draw(e, 9)} >  </div>
-    </div>
-    <div className={`winner ${winner !== '' ? '' : 'shrink'}`}>
+    </section>
+    <section className={`winner ${winner !== '' ? '' : 'shrink'}`}>
                 {/* Display the current winner */}
-                <div className='winner-text'>{winner}</div>
+                <section className='winner-text'>{winner}</section>
                 {/* Button used to reset the board */}
                 <button onClick={() => resetGame()} >
                     Reset Board
                 </button>
-            </div>
+            </section>
     </>
     );
 }

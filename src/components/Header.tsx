@@ -1,15 +1,10 @@
 import React from 'react';
 import './Header.css'
 
-interface Props {
-  text: string
-}
-
-export const Header = (props:Props) => {
+export const Header = () => {
   return (
-    <div className="header">
+    <section className="header">
     <h1>TIC TAC TOE</h1>
-    <h2 className="winner">{props.text}</h2>
-</div>
+</section>
   );
 }
