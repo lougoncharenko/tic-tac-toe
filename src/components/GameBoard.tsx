@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Gameboard.css'
 import { Header } from './Header';
 
@@ -7,7 +7,6 @@ export const GameBoard = () => {
     const [data, setData] = useState(['', '', '', '', '', 
     '', '', '', ''])
     const [winner, setWinner] = useState('');
-    const [reset, setReset] = useState(false);
     const [message, setMessage] = useState<any>("Player One's Turn")
     
       const draw = (event:any, index:number) => {
@@ -81,8 +80,15 @@ export const GameBoard = () => {
     })
 
     const resetGame = () => {
-        setReset(true);
+        setData(['', '', '', '', '', '', '', '', '']);
+        const cells = document.querySelectorAll('cell')
+        cells.forEach((cell) => {
+            cell.innerHTML = ''
+        }) 
+        setTurn(0);
+        setWinner('');
     }
+
     return (
     <>
     <Header  text ={message} />
