@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import './Gameboard.css'
 import { Header } from './Header';
+import { player } from './Player';
 
 export const GameBoard = () => {
-  const [message, setMessage] = useState<any>("Player One's Turn")
-  const placeMark = () => {
+    const [message, setMessage] = useState<any>("Player One's Turn")
+    const playerOne = player('Player One', 'X');
+    const playerTwo = player('Player Two', 'O');
 
-  }
+    const placeMark = () => {
 
-  return (
+    }
+    return (
     <>
     <Header  text ={message} />
 
@@ -27,6 +30,6 @@ export const GameBoard = () => {
     </div>
 
     </>
-  );
+    );
 }
 
