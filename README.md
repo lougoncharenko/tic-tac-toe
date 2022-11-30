@@ -31,8 +31,7 @@ Src/
 ├── App.tsx     # File that imports all component files and renders to App function.
 ├── index.tsx # Main File that renders React.dom
 ```
-<br>
-<br>
+
 
 ## Core Technologies & Concepts Used
 - `TypeScript` 
