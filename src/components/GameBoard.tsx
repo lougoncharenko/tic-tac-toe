@@ -1,21 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Gameboard.css'
+import { Header } from './Header';
 
 export const GameBoard = () => {
+  const [message, setMessage] = useState<any>("Player One's Turn")
+  const placeMark = () => {
+
+  }
+
   return (
+    <>
+    <Header  text ={message} />
+
     <div className="content">
-                    <div className="cell" id="0"></div>
-                    <div className="cell" id="1"></div>
-                    <div className="cell" id="2"></div>
+        <div className="cell" id="0" onClick = {placeMark}></div>
+        <div className="cell" id="1" onClick = {placeMark}></div>
+        <div className="cell" id="2"onClick = {placeMark}></div>
+
+        <div className="cell" id="3" onClick = {placeMark}></div>
+        <div className="cell" id="4" onClick = {placeMark}></div>
+        <div className="cell" id="5" onClick = {placeMark}></div>
         
-                    <div className="cell" id="3"></div>
-                    <div className="cell" id="4"></div>
-                    <div className="cell" id="5"></div>
-                    
-                    <div className="cell" id="6"></div>
-                    <div className="cell" id="7"></div>
-                    <div className="cell" id="8"></div>
-                </div>
+        <div className="cell" id="6" onClick = {placeMark}></div>
+        <div className="cell" id="7" onClick = {placeMark}></div>
+        <div className="cell" id="8" onClick = {placeMark}></div>
+    </div>
+
+    </>
   );
 }
 
