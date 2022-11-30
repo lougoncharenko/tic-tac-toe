@@ -23,3 +23,9 @@ justify-content: center;
     font-size: 15px;
     border-radius: 20px;
 }
+
+.winner {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
