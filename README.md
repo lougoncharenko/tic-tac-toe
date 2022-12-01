@@ -2,6 +2,9 @@
 
 #  REACT Tic Tac Toe Game
 
+<img width="733" alt="Screen Shot 2022-12-01 at 12 23 51 PM" src="https://user-images.githubusercontent.com/93098869/205119444-91e37c3c-ccc0-44c1-8d0a-8e6ccd2eca14.png">
+
+
 </div>
 
 |       |                                                                                                                                                                                                     |
